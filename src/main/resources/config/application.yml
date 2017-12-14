@@ -11,3 +11,12 @@ eureka:
     # Eureka client \u4E0E server \u4EA4\u4E92\u5730\u5740
     service-url:
       defaultZone: http://127.0.0.1:${server.port}/eureka/
+
+# \u5B89\u5168\u8BA4\u8BC1
+security:
+  # \u57FA\u4E8E HTTP basic \u8BA4\u8BC1
+  basic:
+    enabled: true
+  user:
+    name: administrator
+    password: omega
