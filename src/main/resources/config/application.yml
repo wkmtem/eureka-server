@@ -5,7 +5,6 @@ spring:
   application:
     name: Eureka-Server
 
-
 # Eureka Server
 eureka:
   client:
