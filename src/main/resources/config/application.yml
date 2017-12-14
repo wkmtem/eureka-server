@@ -1,14 +1,19 @@
 server:
   port: 6868
 
+spring:
+  application:
+    name: Eureka-Server
+
+
 # Eureka Server
 eureka:
   client:
-    # \u662F\u5426\u5C06\u81EA\u5DF1\u6CE8\u518C\u5230Eureka\u670D\u52A1\u4E2D, default: true (\u672C\u8EAB\u5C31\u662FEureka\u670D\u52A1, \u65E0\u987B\u6CE8\u518C)
+    # \u662F\u5426\u5C06\u81EA\u5DF1\u6CE8\u518C\u5230Eureka\u670D\u52A1\u4E2D, default: true(\u96C6\u7FA4), false(\u5355\u8282\u70B9)
     register-with-eureka: false
-    # \u662F\u5426\u4ECEEureka\u4E2D\u83B7\u53D6\u6CE8\u518C\u4FE1\u606F, default: true
+    # \u662F\u5426\u4ECEEureka\u4E2D\u83B7\u53D6\u6CE8\u518C\u4FE1\u606F, default: true(\u96C6\u7FA4), false(\u5355\u8282\u70B9)
     fetch-registry: false
-    # Eureka client \u4E0E server \u4EA4\u4E92\u5730\u5740
+    # Eureka client\u4E0Eserver\u4EA4\u4E92\u5730\u5740(Server\u96C6\u7FA4\u5219\u76F8\u4E92\u6CE8\u518C: http://name:password@127.0.0.1:6869/eureka/)
     service-url:
       defaultZone: http://127.0.0.1:${server.port}/eureka/
 
