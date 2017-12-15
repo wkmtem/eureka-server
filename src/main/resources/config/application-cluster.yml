@@ -5,14 +5,14 @@ spring:
   application:
     name: Eureka-Server
 
-# Eureka Server
+# Eureka Server 高可用集群
 eureka:
   client:
     # 是否将自己注册到Eureka服务中, default: true(集群)
     register-with-eureka: true
     # 是否从Eureka中获取注册信息, default: true(集群)
     fetch-registry: true
-    # Eureka client与server交互地址(Server集群则相互注册)
+    # Eureka client与server交互地址(默认轮询, Server集群则相互注册)
     service-url:
       defaultZone: http://administrator:omega@127.0.0.1:6869/eureka/
 

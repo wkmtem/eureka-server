@@ -5,14 +5,14 @@ spring:
   application:
     name: Eureka-Server
 
-# Eureka Server
+# Eureka Server 单节点
 eureka:
   client:
     # 是否将自己注册到Eureka服务中, false(单节点)
     register-with-eureka: false
     # 是否从Eureka中获取注册信息, false(单节点)
     fetch-registry: false
-    # Eureka client与server交互地址
+    # Eureka client与server交互地址(默认轮询)
     service-url:
       defaultZone: http://127.0.0.1:${server.port}/eureka/
 
