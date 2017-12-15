@@ -1,0 +1,30 @@
+server:
+  port: 6868
+
+spring:
+  application:
+    name: Eureka-Server
+
+# Eureka Server
+eureka:
+  client:
+    # 是否将自己注册到Eureka服务中, default: true(集群), false(单节点)
+    register-with-eureka: false
+    # 是否从Eureka中获取注册信息, default: true(集群), false(单节点)
+    fetch-registry: false
+    # Eureka client与server交互地址(Server集群则相互注册: http://name:password@127.0.0.1:6869/eureka/)
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+
+  server:
+    # 自我保护模式(因网络造成超过90秒无心跳而注销服务注册表中的微服务) default: true(开启: 不盲目注销任何微服务)
+    enable-self-preservation: true
+
+# 安全认证
+security:
+  # 基于 HTTP basic 认证
+  basic:
+    enabled: true
+  user:
+    name: administrator
+    password: omega
