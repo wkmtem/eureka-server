@@ -1,9 +1,5 @@
 server:
-  port: 6868
-
-spring:
-  application:
-    name: Eureka-Server
+  port: 7777
 
 # Eureka Server 高可用集群
 eureka:
