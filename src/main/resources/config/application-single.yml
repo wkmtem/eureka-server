@@ -1,10 +1,6 @@
 server:
   port: 7777
 
-spring:
-  application:
-    name: Eureka-Server
-
 # Eureka Server 单节点
 eureka:
   client:
