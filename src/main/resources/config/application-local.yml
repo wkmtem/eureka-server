@@ -1,5 +1,5 @@
 server:
-  # 支持docker jvm参数
+  # 运行时, 指定参数, 通过入口函数: --port=?或JVM: -Dport=?传递
   port: ${port:7777}
 
 # Eureka Server 单节点
@@ -9,9 +9,6 @@ eureka:
     register-with-eureka: false
     # 是否从Eureka中获取注册信息, false(单节点)
     fetch-registry: false
-    # Eureka client与server交互地址(默认轮询)
-    service-url:
-      defaultZone: http://administrator:omega@127.0.0.1:${server.port}/eureka/
 
   server:
     # 自我保护模式(因网络造成超过90秒无心跳而注销服务注册表中的微服务) default: true(开启: 不盲目注销任何微服务)
