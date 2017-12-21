@@ -1,5 +1,6 @@
 server:
-  port: 7777
+  # 支持docker jvm参数
+  port: ${port:7777}
 
 # Eureka Server 单节点
 eureka:
