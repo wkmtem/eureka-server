@@ -3,4 +3,4 @@ spring:
     name: Eureka-Server
 
   profiles:
-    active: local
+    active: ubuntu
