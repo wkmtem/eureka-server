@@ -11,7 +11,7 @@ eureka:
     fetch-registry: true
     # Eureka client与server交互地址(默认轮询, Server集群则相互注册)
     service-url:
-      defaultZone: ${eurekaServerUrl:http://administrator:omega@127.0.0.1:6869/eureka/}
+      defaultZone: ${eurekaServerUrl:http://administrator:omega@?.?.?.?:????/eureka/}
 
   server:
     # 自我保护模式(因网络造成超过90秒无心跳而注销服务注册表中的微服务) default: true(开启: 不盲目注销任何微服务)
